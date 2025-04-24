@@ -7,7 +7,7 @@
   }
   
   .selected-player-card {
-    background-color: white;
+    background-color: darkblue;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 80%;
@@ -34,7 +34,8 @@
   }
   
   .selected-player-details {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
   }
   
   .selected-player-details h2 {

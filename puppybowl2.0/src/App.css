@@ -128,3 +128,23 @@ label {
 .read-the-docs {
   color: #888;
 }
+
+.introduction {
+  color: darkorange;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 25px;
+}
+
+h1 {
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 60px;
+}
+
+.quote {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* horizontal, vertical, blur, color */
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #fff;
+    font-family: Georgia, serif;
+  }

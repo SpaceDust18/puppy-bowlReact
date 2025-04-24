@@ -41,7 +41,7 @@ export default function SelectedPlayer({ selectedPlayerId, setSelectedPlayerId, 
                         e.target.onerror = null;
                         e.target.src = "/AdobeStock_581847170.png"
                     }}
-                />
+                /> 
             )}
             <div className="selected-player-details">
                 <h2 className="player-name">{player.name}</h2>

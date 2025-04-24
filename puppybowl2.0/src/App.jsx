@@ -4,7 +4,7 @@ import PlayerForm from "./Components/PlayerForm.jsx";
 import PlayerList from "./Components/PlayerList.jsx";
 import SelectedPlayer from "./Components/SelectedPlayer.jsx";
 import { BrowserRouter } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+
 
 export default function App() {
   let userId = localStorage.getItem("userId");
@@ -49,7 +49,7 @@ export default function App() {
     <BrowserRouter>
       <div className="app-wrapper">
         <div className="content">
-          <h1>Welcome to PuppyBowl!</h1>
+          <h1>Welcome to PuppyBowl 2025!</h1>
         </div>
 
         <div>
