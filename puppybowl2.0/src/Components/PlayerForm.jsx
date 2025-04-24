@@ -30,7 +30,7 @@ export default function PlayerForm({
             breed,
             status,
             imageUrl: imageUrl || "/AdobeStock_581847170.png",
-            creatorId: userId, // even though the API ignores this, we add it to local state
+            creatorId: userId
           }),
         }
       );
@@ -40,7 +40,7 @@ export default function PlayerForm({
       if (data.success) {
         const newPlayer = {
           ...data.data.newPlayer,
-          creatorId: userId, // add it locally so we can identify who created this
+          creatorId: userId
         };
 
         setPlayers((prevPlayers) => {
@@ -49,7 +49,6 @@ export default function PlayerForm({
           return updatedPlayers;
         });
 
-        // Clear form and reset UI
         setSearchQuery("");
         setSelectedPlayerId(null);
         setShowForm(false);
