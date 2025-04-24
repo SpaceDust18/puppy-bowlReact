@@ -11,10 +11,10 @@ export default function PlayerList({
 }) {
   console.log("PlayerList received players:", players);
 
-  // Get the userId from localStorage
+  // Gets the userId from localStorage
   const userId = localStorage.getItem("userId");
 
-  // Filter the players based on the search query
+  // Filters the players based on the search query
   const filteredPlayers = players.filter((player) =>
     player.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -43,7 +43,7 @@ export default function PlayerList({
               player={player}
               setSelectedPlayerId={setSelectedPlayerId}
               setView={setView}
-              userId={userId}  // Pass the userId here for validation
+              userId={userId}
               setPlayers={setPlayers}
             />
           ))}
