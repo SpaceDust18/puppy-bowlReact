@@ -8,7 +8,7 @@ export default function PlayerRow({ setSelectedPlayerId, setView, player, userId
   };
 
   const handleDelete = (e) => {
-    e.stopPropagation();  // Prevents the card click event from firing
+    e.stopPropagation();  // Prevents a card click event
     
     console.log("Attempting to delete player:", player);
     console.log("Player creatorId:", player.creatorId);
@@ -17,9 +17,9 @@ export default function PlayerRow({ setSelectedPlayerId, setView, player, userId
     if (player.creatorId === userId) {
       const confirmDelete = window.confirm(`Are you sure you want to delete ${player.name}?`);
       if (confirmDelete) {
-        // Delete the player from the players array
+        // Deletes the player from the players array
         setPlayers((prevPlayers) => prevPlayers.filter((p) => p.id !== player.id));
-        // Optionally, remove the player from localStorage if saved there
+        // Removes the player from localStorage
         const updatedPlayers = JSON.parse(localStorage.getItem("players")).filter((p) => p.id !== player.id);
         localStorage.setItem("players", JSON.stringify(updatedPlayers));
        
@@ -52,7 +52,6 @@ export default function PlayerRow({ setSelectedPlayerId, setView, player, userId
         </div>
         <div className="more-info">
           <button onClick={handleSelect}>More Details</button>
-          {/* Add the Delete button here */}
           <button onClick={handleDelete}>Delete</button>
         </div>
       </div>
