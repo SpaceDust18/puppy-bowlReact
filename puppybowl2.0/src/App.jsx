@@ -4,6 +4,7 @@ import PlayerForm from "./Components/PlayerForm.jsx";
 import PlayerList from "./Components/PlayerList.jsx";
 import SelectedPlayer from "./Components/SelectedPlayer.jsx";
 import { BrowserRouter } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function App() {
   let userId = localStorage.getItem("userId");
@@ -56,14 +57,7 @@ export default function App() {
             Thanks for joining this year's Puppy Bowl, get your team ready and let's Puppy Bowl!!
           </p>
 
-          <div className="nav-bar">
-            <button onClick={() => {
-              setSelectedPlayerId(null);
-              setView("players");
-            }}>
-              Players
-            </button>
-          </div>
+       
 
           <div className="quote">
             <blockquote>

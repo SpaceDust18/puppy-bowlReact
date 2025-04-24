@@ -29,7 +29,7 @@ export default function PlayerForm({
             name,
             breed,
             status,
-            imageUrl,
+            imageUrl: imageUrl || "/AdobeStock_581847170.png",
             creatorId: userId, // even though the API ignores this, we add it to local state
           }),
         }
