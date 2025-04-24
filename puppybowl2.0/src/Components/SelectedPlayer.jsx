@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./SelectedPlayer.css"
 
 export default function SelectedPlayer({ selectedPlayerId, setSelectedPlayerId, setView }) {
     const [player, setPlayer] = useState();
@@ -30,10 +31,10 @@ export default function SelectedPlayer({ selectedPlayerId, setSelectedPlayerId, 
     };
 
     return (
-        <div className="selected-player">
+        <div className="selected-player-container">
             {player.imageUrl && (
                 <img
-                    className="player-image"
+                    className="selected-player-image"
                     src={player.imageUrl}
                     alt={`${player.name}'s profile`}
                     onError={(e) => {
@@ -42,7 +43,7 @@ export default function SelectedPlayer({ selectedPlayerId, setSelectedPlayerId, 
                     }}
                 />
             )}
-            <div className="player-details">
+            <div className="selected-player-details">
                 <h2 className="player-name">{player.name}</h2>
                 <strong>Player Breed:</strong><p>{player.breed}</p>
                 <strong>Player Status:</strong><p>{player.status}</p>

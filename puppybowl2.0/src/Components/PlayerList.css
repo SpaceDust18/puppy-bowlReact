@@ -1,0 +1,29 @@
+.player-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 1fr will take the space equally */
+    gap: 16px;
+    margin-top: 16px;
+    padding: 0 16px;
+  }
+  
+  .search-bar {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .search-bar input {
+    padding: 8px;
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  @media (max-width: 600px) {
+    .player-grid {
+      grid-template-columns: 1fr; /* For mobile, one card per row */
+    }
+  }
+  

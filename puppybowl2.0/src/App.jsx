@@ -56,8 +56,6 @@ export default function App() {
           <p className="introduction">
             Thanks for joining this year's Puppy Bowl, get your team ready and let's Puppy Bowl!!
           </p>
-       “The better I get to know men, the more I find myself loving dogs.”
-       — Charles de Gaulle
           <div className="quote">
             <blockquote>
               “The better I get to know men, the more I find myself loving dogs.” 

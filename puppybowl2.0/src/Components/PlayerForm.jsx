@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./PlayerForm.css"
 
 export default function PlayerForm({
   setPlayers,

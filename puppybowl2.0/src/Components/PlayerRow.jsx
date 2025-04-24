@@ -1,5 +1,6 @@
 import React from "react";
-import "./PlayerRow.css";
+import "./PlayerRow.css"
+
 
 export default function PlayerRow({ setSelectedPlayerId, setView, player, userId, setPlayers }) {
   const handleSelect = () => {
@@ -43,14 +44,14 @@ export default function PlayerRow({ setSelectedPlayerId, setView, player, userId
           }}
         />
       )}
-      <div className="player-background"></div>
-      <div className="player-details">
-        <p className="player-name">{player.name}</p>
+      
+      <div className="card-content">
+        <h2>{player.name}</h2>
         <div className="detail-item">
           <strong>Player Breed:</strong><p>{player.breed}</p>
           <strong>Player Status:</strong><p>{player.status}</p>
         </div>
-        <div className="more-info">
+        <div className="card-buttons">
           <button onClick={handleSelect}>More Details</button>
           <button onClick={handleDelete}>Delete</button>
         </div>

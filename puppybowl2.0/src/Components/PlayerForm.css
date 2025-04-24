@@ -1,0 +1,62 @@
+.create-player-form {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .create-player-form h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .create-player-form label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .create-player-form input,
+  .create-player-form select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 16px;
+  }
+  
+  .create-player-form input[type="url"] {
+    padding: 8px;
+  }
+  
+  .create-player-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .create-player-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .create-player-form button:active {
+    background-color: #00408d;
+  }
+  
+  .create-player-form input:focus,
+  .create-player-form select:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  

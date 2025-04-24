@@ -1,5 +1,6 @@
 import React from "react";
 import PlayerRow from "./PlayerRow";
+import "./PlayerList.css"
 
 export default function PlayerList({ 
   setSelectedPlayerId, 
@@ -35,7 +36,7 @@ export default function PlayerList({
         />
       </div>
 
-      <div className="player-list">
+      <div className="player-grid">
         {filteredPlayers &&
           filteredPlayers.map((player) => (
             <PlayerRow
