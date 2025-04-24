@@ -41,7 +41,7 @@ export default function App() {
   const handleToggleForm = () => {
     setShowForm(!showForm);
     if (showForm) {
-      setSearchQuery(""); // Reset the search query when the form is closed
+      setSearchQuery(""); // Resets the search query when the form is closed
     }
   };
 
@@ -56,13 +56,12 @@ export default function App() {
           <p className="introduction">
             Thanks for joining this year's Puppy Bowl, get your team ready and let's Puppy Bowl!!
           </p>
-
-       
-
+       “The better I get to know men, the more I find myself loving dogs.”
+       — Charles de Gaulle
           <div className="quote">
             <blockquote>
-              “animal quote or change to another section if desired"
-              — Cuties
+              “The better I get to know men, the more I find myself loving dogs.” 
+              — Charles de Gaulle
             </blockquote>
           </div>
         </div>
@@ -95,7 +94,7 @@ export default function App() {
                   setView={setView} 
                   setSelectedPlayerId={setSelectedPlayerId} 
                   fetchPlayers={fetchPlayers}
-                  setSearchQuery={setSearchQuery} // Pass setSearchQuery to the form to clear it after player is added
+                  setSearchQuery={setSearchQuery}
                 />
               )}
             </>
