@@ -6,6 +6,12 @@ import SelectedPlayer from "./Components/SelectedPlayer.jsx";
 import { BrowserRouter } from 'react-router-dom';
 
 export default function App() {
+  let userId = localStorage.getItem("userId");
+  if (!userId) {
+    userId = `user-${Date.now()}`;
+    localStorage.setItem("userId", userId);
+  }
+
   const [selectedPlayerId, setSelectedPlayerId] = useState(null);
   const [players, setPlayers] = useState([]);
   const [view, setView] = useState("players");

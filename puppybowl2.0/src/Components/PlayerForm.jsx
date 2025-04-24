@@ -5,7 +5,7 @@ export default function PlayerForm({
   setShowForm,
   setView,
   setSelectedPlayerId,
-  setSearchQuery, // Add this to clear the search query
+  setSearchQuery,
 }) {
   const [name, setName] = useState("");
   const [breed, setBreed] = useState("");
@@ -14,6 +14,8 @@ export default function PlayerForm({
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const userId = localStorage.getItem("userId");
 
     try {
       const response = await fetch(
@@ -28,6 +30,7 @@ export default function PlayerForm({
             breed,
             status,
             imageUrl,
+            creatorId: userId, // even though the API ignores this, we add it to local state
           }),
         }
       );
@@ -35,24 +38,22 @@ export default function PlayerForm({
       const data = await response.json();
 
       if (data.success) {
-        const newPlayer = data.data.newPlayer;
-        console.log("New player added", newPlayer);
+        const newPlayer = {
+          ...data.data.newPlayer,
+          creatorId: userId, // add it locally so we can identify who created this
+        };
 
         setPlayers((prevPlayers) => {
-            const updatedPlayers = [...prevPlayers, newPlayer];
-            localStorage.setItem("players", JSON.stringify(updatedPlayers));
-            return updatedPlayers;
-          });
+          const updatedPlayers = [...prevPlayers, newPlayer];
+          localStorage.setItem("players", JSON.stringify(updatedPlayers));
+          return updatedPlayers;
+        });
 
-        // Clear the search query after adding a player
+        // Clear form and reset UI
         setSearchQuery("");
-
-        // Reset the form and view
         setSelectedPlayerId(null);
         setShowForm(false);
         setView("players");
-
-        // Clear form fields
         setName("");
         setBreed("");
         setStatus("bench");
