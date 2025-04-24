@@ -40,3 +40,47 @@
 .read-the-docs {
   color: #888;
 }
+
+.search-bar {
+  margin: 1rem 0;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.search-bar input {
+  padding: 0.5rem;
+  width: 250px;
+  font-family: Georgia, serif;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.search-bar button {
+  padding: 0.5rem 1rem;
+  background-color: #7cbf8b;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.create-player-form {
+  border: 2px solid #ddd;
+  padding: 16px;
+  margin: 20px 0;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.create-player-form input {
+  display: block;
+  margin: 8px 0;
+  padding: 8px;
+  width: 100%;
+  font-family: Georgia, serif;
+}
+
+label {
+  color: red
+}
